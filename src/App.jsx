@@ -22,7 +22,7 @@ function App() {
   }
 
   return (
-    <div className="bg-[#000] h-screen w-screen main">
+    <div className="bg-[#000] h-screen w-screen main z-[1]">
       {!bool ? (
         <div className="input flex p-3 flex-col absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 border-2 border-white gap-3">
           <input
@@ -41,17 +41,15 @@ function App() {
           </button>
         </div>
       ) : (
-        <div className="relative time h-screen w-screen flex justify-center items-center overflow-hidden">
+        <div className="relative bg-black time h-screen w-screen flex justify-center items-center overflow-hidden">
           {/* Rotating Line */}
           <div
-            className={`${
-              count === 0 ? "" : "line"
-            } rounded-[50%] z-[-1] md:z-[1] h-[500px] md:h-[300px] `}
+            className={`${count === 0 ? "" : "line"} rounded-[50%] z-[2] `}
           ></div>
 
           {/* Rotating Countdown Timer */}
           <div
-            className={`timer text-white text-6xl h-[60%] md:h-screen w-[90%] md:w-[50%] rounded-[50%] text-center justify-center items-center absolute flex top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2`}
+            className={`timer text-white text-6xl h-[40%] md:h-screen w-[90%] md:w-[50%] rounded-[50%] text-center justify-center items-center absolute flex top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2`}
           >
             {count !== 0 ? (
               <h1>{count}</h1>
