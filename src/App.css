@@ -1,0 +1,38 @@
+/* App.css */
+
+body {
+  margin: 0;
+  overflow: hidden;
+}
+.main {
+  z-index: 3;
+}
+
+.time {
+  z-index: 4;
+}
+
+.timer {
+  background: radial-gradient(rgb(121, 21, 21) 0%, black 40%, rgb(255, 0, 0));
+}
+
+.line {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0px;
+  transform-origin: top center;
+  animation: rotateLine 1.5s infinite linear;
+  z-index: -1;
+  box-shadow: 3px 3px 100px 20px white;
+}
+
+/* Keyframes for rotating the line */
+@keyframes rotateLine {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
